@@ -1,0 +1,396 @@
+:root {
+    --primario: #FFEBCD;
+    --primarioOscuro: #FFDAB9;
+    --secundario: #8FBC8F;
+    --secundarioOscuro: #556B2F;
+    --blanco: #FFF;
+    --negro: #000;
+    --fuentePrincipal: font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+}
+
+p {
+    color: var(--negro);
+    text-transform: none;
+    text-align: justify;
+    padding: 3rem;
+}
+
+/* Globales */
+
+body {
+    background-size: cover;
+    background-color: var(--primario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+}
+
+/*INDEX*/
+
+.contenedor_index {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--primarioOscuro);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+    align-items: baseline;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secundarioOscuro);
+}
+
+#logo_div {
+    width: 20%; 
+    height: auto;
+    padding: 4rem;
+}
+
+#logo_img {
+    width: 100%;
+}
+
+.rrss_div {
+    width: 15%;
+    padding: 4rem;
+}
+
+.navImg {
+    width: 30%; 
+    height: auto;
+}
+
+.menu_nav {
+    width: 100%;
+    padding: 4rem;
+    text-align: right;
+}
+
+ul, li {
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+    display: inline;
+
+}
+
+li {
+    padding: 1%;
+    font-size: 3rem;
+}
+
+li:hover {
+    color: var(--secundario);
+}
+
+h2 {
+    padding: 4rem;
+    font-size: 5rem;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secundarioOscuro);
+}
+
+h3 {
+    text-align: center;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.firstImg_div {
+    text-align: center;
+}
+.firstImg {
+    width: 100%;
+    /* border-radius: 15%; */
+}
+
+.main_text {
+    background-color: var(--primario);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+    align-items: baseline;
+
+}
+
+.main_text_div {
+    width: 33%;
+}
+
+.iconos_servicios {
+    display: flex;
+    justify-content: center;
+}
+
+.iconos_servicios_img {
+    width: 60%;
+}
+
+footer {
+    padding: 4rem;
+    background-color: var(--primarioOscuro);
+    color: var(--secundarioOscuro);
+}
+
+/* CABAÑAS */
+
+.texto_cabanias {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.img_cabanias {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img1_cabanias img2_cabanias img3_cabanias" 
+    "img4_cabanias img5_cabanias img6_cabanias";
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.img1_cabanias {
+    grid-area: img1_cabanias;
+    width: 80%;
+    height: auto;
+}
+
+.img2_cabanias {
+    grid-area: img2_cabanias;
+    width: 80%;
+    height: auto;  
+}
+
+.img3_cabanias {
+    grid-area: img3_cabanias;
+    width: 80%;
+    height: auto;  
+}
+
+.img4_cabanias {
+    grid-area: img4_cabanias;
+    width: 80%;
+    height: auto;  
+}
+.img5_cabanias {
+    grid-area: img5_cabanias;
+    width: 80%;
+    height: auto;  
+}
+.img6_cabanias {
+    grid-area: img6_cabanias;
+    width: 80%;
+    height: auto;  
+}
+
+/*SERVICIOS*/
+.contenedor_imag_servicios {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "img1_servicio img2_servicio img3_servicio";
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.img1_servicio {
+    grid-area: img1_cabanias;
+    width: 80%;
+    height: auto;
+}
+
+.img2_servicio {
+    grid-area: img1_cabanias;
+    width: 80%;
+    height: auto;
+}
+
+.img3_servicio {
+    grid-area: img1_cabanias;
+    width: 80%;
+    height: auto;
+}
+
+/*UBICACION*/
+
+.ubicacion_cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "mapa brujula"
+    "mapa ubicacion"
+}
+
+.mapa {
+    grid-area: mapa;
+    grid-row: 1/-3;
+}
+
+.brujula {
+    grid-area: brujula;
+}
+
+.brujula img {
+    width: 10%;
+    height: auto;
+}
+
+.brujula p {
+    font-size: 2rem;
+}
+
+.ubicacion {
+    grid-area: ubicacion;
+}
+
+.ubicacion img {
+    width: 10%;
+    height: auto;
+}
+
+.ubicacion p {
+    font-size: 2rem;
+}
+
+/*CONTACTO*/
+
+form {
+    text-align: center;
+    background-color: #87CEFA;
+    padding-bottom: 2rem;
+}
+
+input {
+    font-size: 2rem;
+}
+
+.texto_contacto{
+    text-align: center;
+}
+
+.boton {
+    font-size: 2.5rem;
+    background-color: #FF8C00;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width: 480px) {
+    .header {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "logo_div rrss_div"
+        "menu_nav menu_nav"
+        ;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    #logo_div {
+        grid-area: logo_div;
+        width: 100%; 
+        height: auto;
+        padding: 2rem;
+    }
+
+    .rrss_div {
+        grid-area: rrss_div;
+        width: 100%; 
+        height: auto;
+    }
+
+    .menu_nav {
+        grid-area: menu_nav;
+    }
+
+    .main_text {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "quienes"
+        "historia"
+        "actividades"
+        ;
+
+
+    }
+
+    #quienes {
+        grid-area: quienes;
+    }
+
+    #historia {
+        grid-area: historia;
+    }
+
+    #actividades {
+        grid-area: actividades;
+    }
+
+    .texto_cabanias {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
+
