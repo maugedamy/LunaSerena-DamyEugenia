@@ -110,10 +110,12 @@ ul, li {
 li {
     padding: 1%;
     font-size: 3rem;
+    transition: all 1s;
 }
 
 li:hover {
     color: var(--secundario);
+    font-size: 3.5rem;
 }
 
 h2 {
