@@ -1,10 +1,11 @@
 :root {
     --primario: #FFEBCD;
-    --primarioOscuro: #FFDAB9;
+    --primarioOscuro: #D2B48C;
     --secundario: #8FBC8F;
     --secundarioOscuro: #556B2F;
     --blanco: #FFF;
     --negro: #000;
+    --naranja: #F4A460;
     --fuentePrincipal: font-family: 'Roboto', sans-serif;
 }
 
@@ -20,6 +21,8 @@ html {
 
 }
 
+/* Globales */
+
 p {
     color: var(--negro);
     text-transform: none;
@@ -27,11 +30,10 @@ p {
     padding: 3rem;
 }
 
-/* Globales */
-
 body {
     background-size: cover;
     background-color: var(--primario);
+    background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
 }
@@ -52,6 +54,7 @@ body {
 .header {
     grid-area: header;
     background-color: var(--primarioOscuro);
+    background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -59,6 +62,13 @@ body {
     text-transform: uppercase;
     align-items: baseline;
 }
+
+/* .page {
+    border: solid 1px grey;
+    border-radius: 5px;
+    background-color: var(--naranja);
+    padding: 1rem;
+} */
 
 .main {
     grid-area: main;
@@ -76,7 +86,7 @@ a {
 #logo_div {
     width: 20%; 
     height: auto;
-    padding: 4rem;
+    padding: 1rem;
 }
 
 #logo_img {
@@ -84,8 +94,9 @@ a {
 }
 
 .rrss_div {
-    width: 15%;
-    padding: 4rem;
+    width: 20%;
+    padding: 3rem;
+    
 }
 
 .navImg {
@@ -147,7 +158,7 @@ h3 {
 }
 
 .main_text {
-    background-color: var(--primario);
+    /* background-color: var(--primario); */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -270,6 +281,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding: 2rem;
     grid-template-areas:
     "mapa brujula"
     "mapa ubicacion"
