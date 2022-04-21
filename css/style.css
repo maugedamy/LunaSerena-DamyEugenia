@@ -39,6 +39,19 @@ body {
 
 /*INDEX*/
 
+/* Boostrap */
+ .accordion-button {
+    font-size: 5rem;
+    color: var(--secundarioOscuro);
+}
+
+.accordion-body {
+    background-color: var(--primarioOscuro);
+}
+
+
+/* fuera de BS */
+
 .contenedor_index {
     display:grid;
     grid-template-columns: 1fr;
@@ -187,6 +200,17 @@ footer {
 }
 
 /* CABAÑAS */
+
+/* Boostrap */
+
+#carouselExampleControls {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+/* Fuera de BS */
 
 .texto_cabanias {
     display: grid;
