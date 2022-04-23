@@ -37,16 +37,33 @@ body {
     font-size: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: var(--secundarioOscuro);
+}
+
 /*INDEX*/
 
 /* Boostrap */
+
+.accordion-item {
+    background-color: var(--primario);
+}
+
  .accordion-button {
     font-size: 5rem;
     color: var(--secundarioOscuro);
+    background-color: var(--primarioOscuro)
 }
 
 .accordion-body {
     background-color: var(--primarioOscuro);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--secundarioOscuro);
+    background-color: var(--primario);
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 
 
@@ -75,24 +92,12 @@ body {
     align-items: baseline;
 }
 
-/* .page {
-    border: solid 1px grey;
-    border-radius: 5px;
-    background-color: var(--naranja);
-    padding: 1rem;
-} */
-
 .main {
     grid-area: main;
 }
 
 .footer {
     grid-area: footer;
-}
-
-a {
-    text-decoration: none;
-    color: var(--secundarioOscuro);
 }
 
 #logo_div {
@@ -136,8 +141,8 @@ li {
     transition: all 1s;
 }
 
-li:hover {
-    color: var(--secundario);
+.page:hover {
+    color: var(--secundarioOscuro);
     font-size: 3.5rem;
 }
 
@@ -184,6 +189,8 @@ h3 {
     width: 33%;
 }
 
+/* SERVICIOS */
+
 .iconos_servicios {
     display: flex;
     justify-content: center;
@@ -201,12 +208,12 @@ footer {
 
 /* CABAÑAS */
 
-/* Boostrap */
+/* Bootstrap */
 
 #carouselExampleControls {
     width: 70%;
     position: relative;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 
@@ -347,7 +354,7 @@ footer {
 
 form {
     text-align: center;
-    background-color: #87CEFA;
+    background-color: #ADD8E6;
     padding-bottom: 2rem;
 }
 
@@ -359,12 +366,18 @@ input {
     text-align: center;
 }
 
-.boton {
+.btn {
+    width: 20rem;
+    height: 5rem;
+    font-size: 3rem;
+}
+
+/* .boton {
     font-size: 2.5rem;
     background-color: #FF8C00;
     border-radius: 5%;
     padding: 1rem;
-}
+} */
 
 /*MEDIA QUERY*/
 
