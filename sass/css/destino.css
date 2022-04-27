@@ -1,0 +1,479 @@
+@charset "UTF-8";
+:root {
+  --primario: #FFEBCD;
+  --primarioOscuro: #D2B48C;
+  --secundario: #8FBC8F;
+  --secundarioOscuro: #556B2F;
+  --blanco: #FFF;
+  --negro: #000;
+  --naranja: #F4A460;
+  --fuentePrincipal: font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+html body {
+  background-size: cover;
+  background-color: var(--primario);
+  background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+}
+
+/* Globales */
+p {
+  color: var(--negro);
+  text-transform: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secundarioOscuro);
+}
+
+/*INDEX*/
+/* Boostrap */
+.accordion-item {
+  background-color: var(--primario);
+}
+.accordion-item .accordion-button {
+  font-size: 5rem;
+  color: var(--secundarioOscuro);
+  background-color: var(--primarioOscuro);
+}
+.accordion-item .accordion-button .accordion-body {
+  background-color: var(--primarioOscuro);
+}
+.accordion-item .accordion-button .accordion-body .accordion-button:not(.collapsed) {
+  color: var(--secundarioOscuro);
+  background-color: var(--primario);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.13);
+}
+
+/* fuera de BS */
+.contenedor_index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--primarioOscuro);
+  background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+  align-items: baseline;
+}
+.header .rrss_div {
+  width: 20%;
+  padding: 3rem;
+}
+.header .rrss_div .navImg {
+  width: 30%;
+  height: auto;
+}
+.header .menu_nav {
+  width: 100%;
+  padding: 4rem;
+  text-align: right;
+}
+.header .menu_nav .page:hover {
+  color: var(--secundarioOscuro);
+  font-size: 3.5rem;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+#logo_div {
+  width: 20%;
+  height: auto;
+  padding: 1rem;
+}
+#logo_div #logo_img {
+  width: 100%;
+}
+
+ul,
+li {
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style: none;
+  display: inline;
+}
+
+li {
+  padding: 1%;
+  font-size: 3rem;
+  transition: all 1s;
+}
+
+h2 {
+  padding: 4rem;
+  font-size: 5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--secundarioOscuro);
+}
+
+h3 {
+  text-align: center;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.firstImg_div {
+  text-align: center;
+}
+
+.firstImg {
+  width: 100%;
+  /* border-radius: 15%; */
+}
+
+.main_text {
+  /* background-color: var(--primario); */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+  align-items: baseline;
+}
+
+.main_text_div {
+  width: 33%;
+}
+
+/* SERVICIOS */
+.iconos_servicios {
+  display: flex;
+  justify-content: center;
+}
+
+.iconos_servicios_img {
+  width: 60%;
+}
+
+footer {
+  padding: 4rem;
+  background-color: var(--primarioOscuro);
+  color: var(--secundarioOscuro);
+}
+
+/* CABAÑAS */
+/* Bootstrap */
+#carouselExampleControls {
+  width: 70%;
+  position: relative;
+  margin: 3rem auto;
+}
+
+/* Fuera de BS */
+.texto_cabanias {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.img_cabanias {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img1_cabanias img2_cabanias img3_cabanias" "img4_cabanias img5_cabanias img6_cabanias";
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.img1_cabanias {
+  grid-area: img1_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img2_cabanias {
+  grid-area: img2_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img3_cabanias {
+  grid-area: img3_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img4_cabanias {
+  grid-area: img4_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img5_cabanias {
+  grid-area: img5_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img6_cabanias {
+  grid-area: img6_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+/*SERVICIOS*/
+.contenedor_imag_servicios {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "img1_servicio img2_servicio img3_servicio";
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.img1_servicio {
+  grid-area: img1_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img2_servicio {
+  grid-area: img1_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+.img3_servicio {
+  grid-area: img1_cabanias;
+  width: 80%;
+  height: auto;
+}
+
+/*UBICACION*/
+.ubicacion_cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+  grid-template-areas: "mapa brujula" "mapa ubicacion";
+}
+
+.mapa {
+  grid-area: mapa;
+  grid-row: 1/-3;
+  width: 90%;
+  padding-top: 10rem;
+}
+
+.brujula {
+  grid-area: brujula;
+}
+
+.brujula img {
+  width: 10%;
+  height: auto;
+}
+
+.brujula p {
+  font-size: 2rem;
+}
+
+.ubicacion {
+  grid-area: ubicacion;
+}
+
+.ubicacion img {
+  width: 10%;
+  height: auto;
+}
+
+.ubicacion p {
+  font-size: 2rem;
+}
+
+/*CONTACTO*/
+form {
+  text-align: center;
+  background-color: #ADD8E6;
+  padding-bottom: 2rem;
+}
+
+input {
+  font-size: 2rem;
+}
+
+.texto_contacto {
+  text-align: center;
+}
+
+.btn {
+  width: 20rem;
+  height: 5rem;
+  font-size: 3rem;
+}
+
+/* .boton {
+    font-size: 2.5rem;
+    background-color: #FF8C00;
+    border-radius: 5%;
+    padding: 1rem;
+} */
+/*MEDIA QUERY*/
+@media only screen and (max-width: 480px) {
+  .header {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
+
+  /* CABAÑAS */
+  .texto_cabanias {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* UBICACIÓN */
+  .ubicacion_cont {
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .header {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
+}
+
+/*# sourceMappingURL=destino.css.map */
