@@ -1,28 +1,143 @@
 @charset "UTF-8";
-:root {
-  --primario: #FFEBCD;
-  --primarioOscuro: #D2B48C;
-  --secundario: #8FBC8F;
-  --secundarioOscuro: #556B2F;
-  --blanco: #FFF;
-  --negro: #000;
-  --naranja: #F4A460;
-  --fuentePrincipal: font-family: "Roboto", sans-serif;
-}
-
+/*$--fuentePrincipal: font-family: 'Roboto', sans-serif;*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*MEDIA QUERY*/
+@media only screen and (max-width: 480px) {
+  .header {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
+
+  /* CABAÑAS */
+  .texto_cabanias {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* UBICACIÓN */
+  .ubicacion_cont {
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 html body {
   background-size: cover;
-  background-color: var(--primario);
+  background-color: primario;
   background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -30,7 +145,7 @@ html body {
 
 /* Globales */
 p {
-  color: var(--negro);
+  color: --negro;
   text-transform: none;
   text-align: center;
   padding: 2rem;
@@ -38,25 +153,25 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--secundarioOscuro);
+  color: #556B2F;
 }
 
 /*INDEX*/
 /* Boostrap */
 .accordion-item {
-  background-color: var(--primario);
+  background-color: #FFEBCD;
 }
 .accordion-item .accordion-button {
   font-size: 5rem;
-  color: var(--secundarioOscuro);
-  background-color: var(--primarioOscuro);
+  color: #556B2F;
+  background-color: #D2B48C;
 }
 .accordion-item .accordion-button .accordion-body {
-  background-color: var(--primarioOscuro);
+  background-color: #D2B48C;
 }
 .accordion-item .accordion-button .accordion-body .accordion-button:not(.collapsed) {
-  color: var(--secundarioOscuro);
-  background-color: var(--primario);
+  color: #556B2F;
+  background-color: #FFEBCD;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.13);
 }
 
@@ -70,7 +185,7 @@ a {
 
 .header {
   grid-area: header;
-  background-color: var(--primarioOscuro);
+  background-color: #D2B48C;
   background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
   width: 100%;
   display: flex;
@@ -93,7 +208,7 @@ a {
   text-align: right;
 }
 .header .menu_nav .page:hover {
-  color: var(--secundarioOscuro);
+  color: #556B2F;
   font-size: 3.5rem;
 }
 
@@ -138,7 +253,7 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--secundarioOscuro);
+  color: #556B2F;
 }
 
 h3 {
@@ -168,10 +283,6 @@ h3 {
   align-items: baseline;
 }
 
-.main_text_div {
-  width: 33%;
-}
-
 /* SERVICIOS */
 .iconos_servicios {
   display: flex;
@@ -184,8 +295,27 @@ h3 {
 
 footer {
   padding: 4rem;
-  background-color: var(--primarioOscuro);
-  color: var(--secundarioOscuro);
+  background-color: #D2B48C;
+  color: #556B2F;
+  text-align: center;
+}
+
+.boton-Facebook {
+  background-color: #FFEBCD;
+  color: #FFEBCD;
+  font-size: 2rem;
+  width: 10%;
+  height: auto;
+  margin: 1rem;
+}
+
+.boton-Instagram {
+  background-color: #FFEBCD;
+  color: #FFEBCD;
+  font-size: 2rem;
+  width: 10%;
+  height: auto;
+  margin: 1rem;
 }
 
 /* CABAÑAS */
@@ -342,138 +472,6 @@ input {
   width: 20rem;
   height: 5rem;
   font-size: 3rem;
-}
-
-/* .boton {
-    font-size: 2.5rem;
-    background-color: #FF8C00;
-    border-radius: 5%;
-    padding: 1rem;
-} */
-/*MEDIA QUERY*/
-@media only screen and (max-width: 480px) {
-  .header {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  #logo_div {
-    grid-area: logo_div;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .rrss_div {
-    grid-area: rrss_div;
-    width: 100%;
-    height: auto;
-  }
-
-  .menu_nav {
-    grid-area: menu_nav;
-    text-align: center;
-  }
-
-  .main_text {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "quienes" "historia" "actividades";
-  }
-
-  .main_text_div {
-    width: 100%;
-  }
-
-  #quienes {
-    grid-area: quienes;
-  }
-
-  #historia {
-    grid-area: historia;
-  }
-
-  #actividades {
-    grid-area: actividades;
-  }
-
-  /* CABAÑAS */
-  .texto_cabanias {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  /* UBICACIÓN */
-  .ubicacion_cont {
-    display: block;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  .header {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto;
-    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  #logo_div {
-    grid-area: logo_div;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .rrss_div {
-    grid-area: rrss_div;
-    width: 100%;
-    height: auto;
-  }
-
-  .menu_nav {
-    grid-area: menu_nav;
-    padding: 0;
-    text-align: center;
-  }
-
-  .main_text {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "quienes" "historia" "actividades";
-  }
-
-  .main_text_div {
-    width: 100%;
-  }
-
-  #quienes {
-    grid-area: quienes;
-  }
-
-  #historia {
-    grid-area: historia;
-  }
-
-  #actividades {
-    grid-area: actividades;
-  }
 }
 
 /*# sourceMappingURL=destino.css.map */
