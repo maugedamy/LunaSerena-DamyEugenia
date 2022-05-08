@@ -6,131 +6,6 @@
   box-sizing: border-box;
 }
 
-/*MEDIA QUERY*/
-@media only screen and (max-width: 480px) {
-  .header {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  #logo_div {
-    grid-area: logo_div;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .rrss_div {
-    grid-area: rrss_div;
-    width: 100%;
-    height: auto;
-  }
-
-  .menu_nav {
-    grid-area: menu_nav;
-    text-align: center;
-  }
-
-  .main_text {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "quienes" "historia" "actividades";
-  }
-
-  .main_text_div {
-    width: 100%;
-  }
-
-  #quienes {
-    grid-area: quienes;
-  }
-
-  #historia {
-    grid-area: historia;
-  }
-
-  #actividades {
-    grid-area: actividades;
-  }
-
-  /* CABAÑAS */
-  .texto_cabanias {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  /* UBICACIÓN */
-  .ubicacion_cont {
-    display: block;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .header {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto;
-    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  #logo_div {
-    grid-area: logo_div;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-  }
-
-  .rrss_div {
-    grid-area: rrss_div;
-    width: 100%;
-    height: auto;
-  }
-
-  .menu_nav {
-    grid-area: menu_nav;
-    padding: 0;
-    text-align: center;
-  }
-
-  .main_text {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "quienes" "historia" "actividades";
-  }
-
-  .main_text_div {
-    width: 100%;
-  }
-
-  #quienes {
-    grid-area: quienes;
-  }
-
-  #historia {
-    grid-area: historia;
-  }
-
-  #actividades {
-    grid-area: actividades;
-  }
-}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -270,11 +145,9 @@ h3 {
 
 .firstImg {
   width: 100%;
-  /* border-radius: 15%; */
 }
 
 .main_text {
-  /* background-color: var(--primario); */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -304,7 +177,6 @@ footer {
   background-color: #FFEBCD;
   color: #FFEBCD;
   font-size: 2rem;
-  width: 10%;
   height: auto;
   margin: 1rem;
 }
@@ -313,7 +185,6 @@ footer {
   background-color: #FFEBCD;
   color: #FFEBCD;
   font-size: 2rem;
-  width: 10%;
   height: auto;
   margin: 1rem;
 }
@@ -472,6 +343,132 @@ input {
   width: 20rem;
   height: 5rem;
   font-size: 3rem;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width: 480px) {
+  .header {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
+
+  /* CABAÑAS */
+  .texto_cabanias {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* UBICACIÓN */
+  .ubicacion_cont {
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: "logo_div" "rrss_div" "menu_nav";
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  #logo_div {
+    grid-area: logo_div;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .rrss_div {
+    grid-area: rrss_div;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu_nav {
+    grid-area: menu_nav;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main_text {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "quienes" "historia" "actividades";
+  }
+
+  .main_text_div {
+    width: 100%;
+  }
+
+  #quienes {
+    grid-area: quienes;
+  }
+
+  #historia {
+    grid-area: historia;
+  }
+
+  #actividades {
+    grid-area: actividades;
+  }
 }
 
 /*# sourceMappingURL=destino.css.map */
