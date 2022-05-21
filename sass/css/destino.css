@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*$--fuentePrincipal: font-family: 'Roboto', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +13,24 @@ html {
 }
 html body {
   background-size: cover;
-  background-color: primario;
-  background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
-  font-family: "Roboto", sans-serif;
+  background-color: #FFEBCD;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 3rem;
+  position: relative;
+}
+html body::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background: url(../../assets/forest.jpg) no-repeat;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
 }
 
 /* Globales */
@@ -35,6 +50,7 @@ a {
 /* Boostrap */
 .accordion-item {
   background-color: #FFEBCD;
+  margin: 3rem;
 }
 .accordion-item .accordion-button {
   font-size: 5rem;
@@ -60,8 +76,6 @@ a {
 
 .header {
   grid-area: header;
-  background-color: #D2B48C;
-  background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -94,6 +108,17 @@ a {
 .footer {
   grid-area: footer;
 }
+.footer .rrss_div {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+}
+.footer .rrss_div .navImg {
+  width: 5%;
+  padding: 0rem 1rem;
+}
 
 #logo_div {
   width: 20%;
@@ -102,6 +127,15 @@ a {
 }
 #logo_div #logo_img {
   width: 100%;
+  background-color: rgba(183, 227, 241, 0.5019607843);
+  border: solid black 0.1rem;
+  border-radius: 100%;
+  padding: 2rem 0;
+}
+#logo_div #logo_img:hover {
+  transform: scale(1.05);
+  transition: 400ms;
+  filter: brightness(115%);
 }
 
 ul,
@@ -166,33 +200,26 @@ h3 {
   width: 60%;
 }
 
+.texto_servicios {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(173, 216, 230, 0.5019607843);
+  border-radius: 2rem;
+}
+
 footer {
   padding: 4rem;
-  background-color: #D2B48C;
-  color: #556B2F;
+  color: gold;
   text-align: center;
 }
-
-.boton-Facebook {
-  background-color: #FFEBCD;
-  color: #FFEBCD;
-  font-size: 2rem;
-  height: auto;
-  margin: 1rem;
-}
-
-.boton-Instagram {
-  background-color: #FFEBCD;
-  color: #FFEBCD;
-  font-size: 2rem;
-  height: auto;
-  margin: 1rem;
+footer h3 {
+  font-size: 3rem;
 }
 
 /* CABAÑAS */
 /* Bootstrap */
 #carouselExampleControls {
-  width: 70%;
+  width: 50%;
   position: relative;
   margin: 3rem auto;
 }
@@ -201,6 +228,11 @@ footer {
 .texto_cabanias {
   display: grid;
   grid-template-columns: 50% 50%;
+  text-align: center;
+  background-color: rgba(173, 216, 230, 0.5019607843);
+  padding-bottom: 2rem;
+  border-radius: 2rem;
+  margin: 0 10rem;
 }
 
 .img_cabanias {
@@ -282,6 +314,11 @@ footer {
   height: auto;
 }
 
+.img1_servicio:hover, .img2_servicio:hover, .img3_servicio:hover {
+  transform: scale(1.2);
+  transition: 400ms;
+}
+
 /*UBICACION*/
 .ubicacion_cont {
   display: grid;
@@ -307,10 +344,6 @@ footer {
   height: auto;
 }
 
-.brujula p {
-  font-size: 2rem;
-}
-
 .ubicacion {
   grid-area: ubicacion;
 }
@@ -320,15 +353,18 @@ footer {
   height: auto;
 }
 
-.ubicacion p {
-  font-size: 2rem;
+/*CONTACTO*/
+.main_contacto {
+  text-align: center;
 }
 
-/*CONTACTO*/
 form {
   text-align: center;
-  background-color: #ADD8E6;
+  background-color: rgba(173, 216, 230, 0.5019607843);
   padding-bottom: 2rem;
+  border-radius: 2rem;
+  width: 60%;
+  display: inline-block;
 }
 
 input {
@@ -346,7 +382,12 @@ input {
 }
 
 /*MEDIA QUERY*/
+/* Celular */
 @media only screen and (max-width: 480px) {
+  .contenedor_index {
+    display: block;
+  }
+
   .header {
     display: grid;
     align-items: center;
@@ -367,6 +408,9 @@ input {
     grid-area: menu_nav;
     text-align: center;
   }
+  .header .menu_nav ul {
+    display: inline-block;
+  }
 
   #logo_div {
     grid-area: logo_div;
@@ -375,34 +419,32 @@ input {
     padding: 2rem;
   }
 
-  .main_text {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "quienes" "historia" "actividades";
-  }
-
-  .main_text_div {
-    width: 100%;
-  }
-
-  #quienes {
-    grid-area: quienes;
-  }
-
-  #historia {
-    grid-area: historia;
-  }
-
-  #actividades {
-    grid-area: actividades;
+  .accordion-item .accordion-button {
+    font-size: 3.5rem;
   }
 
   /* CABAÑAS */
   .texto_cabanias {
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+  }
+
+  #carouselExampleControls {
+    width: 100%;
+  }
+
+  /* SERVICIOS */
+  .iconos_servicios_img {
+    width: 100%;
+  }
+
+  .contenedor_imag_servicios {
+    display: inline-block;
+  }
+  .contenedor_imag_servicios div {
+    padding: 1rem 0;
   }
 
   /* UBICACIÓN */
@@ -410,7 +452,25 @@ input {
     display: block;
     text-align: center;
   }
+
+  .brujula img {
+    width: 25%;
+  }
+
+  .ubicacion img {
+    width: 25%;
+  }
+
+  /* CONTACTO */
+  form {
+    width: 100%;
+  }
+
+  .footer .rrss_div .navImg {
+    width: 25%;
+  }
 }
+/* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .header {
     width: 100%;
@@ -429,6 +489,10 @@ input {
     width: 100%;
     height: auto;
   }
+  .header .rrss_div .navImg {
+    width: 20%;
+    padding: 0 1rem;
+  }
   .header .menu_nav {
     grid-area: menu_nav;
     padding: 0;
@@ -440,6 +504,9 @@ input {
     width: 100%;
     height: auto;
     padding: 2rem;
+  }
+  #logo_div #logo_img {
+    width: 80%;
   }
 
   .main_text {
@@ -464,6 +531,27 @@ input {
 
   #actividades {
     grid-area: actividades;
+  }
+
+  #carouselExampleControls {
+    width: 80%;
+  }
+
+  .img1_servicio, .img2_servicio, .img3_servicio {
+    width: 100%;
+  }
+
+  .ubicacion_cont {
+    display: block;
+    text-align: center;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  .footer .rrss_div .navImg {
+    width: 10%;
   }
 }
 
