@@ -381,7 +381,7 @@ input {
   font-size: 3rem;
 }
 
-/*MEDIA QUERY*/
+/*MEDIA QUERIES*/
 /* Celular */
 @media only screen and (max-width: 480px) {
   .contenedor_index {
