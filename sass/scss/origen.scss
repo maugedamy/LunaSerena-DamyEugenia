@@ -29,7 +29,7 @@ html {
         z-index: -1;
         right: 0;
         bottom: 0;
-        //overflow: visible;
+        
     }
 }
 
@@ -89,9 +89,6 @@ a {
 
 .header {
     grid-area: header;
-    // background-color: $primarioOscuro;
-    // background-image: linear-gradient(to bottom, #D2B48C, #FFEBCD);
-    // background-image: url(../../assets/forest.jpg);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -350,7 +347,6 @@ footer {
 .img1_servicio:hover, .img2_servicio:hover, .img3_servicio:hover {
     transform: scale(1.20);
     transition: 400ms;
-    //filter: brightness(115%);
 }
 
 /*UBICACION*/
